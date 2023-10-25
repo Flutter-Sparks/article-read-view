@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:scroll_indicator/widgets/banner.dart';
@@ -8,29 +6,29 @@ import 'package:scroll_indicator/widgets/content.dart';
 import 'package:scroll_indicator/widgets/indicator.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const BlogView());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class BlogView extends StatelessWidget {
+  const BlogView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: ReadingView(),
     );
   }
 }
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class ReadingView extends StatefulWidget {
+  const ReadingView({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<ReadingView> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<ReadingView> {
   late ScrollController _scrollController;
 
   @override
